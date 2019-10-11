@@ -1,0 +1,23 @@
+server:
+  port: 9012
+spring:
+  application:
+    name: tensquare-web
+  rabbitmq:
+    host: 192.168.230.100
+eureka:
+  client:
+    service-url:
+      defaultZone: http://127.0.0.1:6868/eureka/
+  instance:
+    prefer-ip-address: true
+zuul:
+  routes:
+    tensquare-gathering: /gathering/**
+    tensquare-article: /article/**
+    tensquare-base: /base/**
+    tensquare-friend: /friend/**
+    tensquare-qa: /qa/**
+    tensquare-recruit: /recruit/**
+    tensquare-spit: /spit/**
+    tensquare-user: /user/**
